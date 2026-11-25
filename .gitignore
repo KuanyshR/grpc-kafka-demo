@@ -1,0 +1,9 @@
+.gradle/
+build/
+out/
+.idea/
+*.iml
+.vscode/
+python-client/generated/
+python-client/.venv/
+__pycache__/

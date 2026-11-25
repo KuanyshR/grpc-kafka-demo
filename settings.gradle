@@ -1,0 +1,7 @@
+rootProject.name = 'grpc-kafka-demo'
+
+// gRPC task
+include 'grpc-proto', 'grpc-server', 'grpc-client'
+
+// Kafka + Avro task
+include 'kafka-common', 'kafka-producer', 'kafka-consumer'

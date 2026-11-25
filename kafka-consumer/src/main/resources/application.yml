@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: kafka-avro-consumer
+  main:
+    web-application-type: none
+    banner-mode: off
+
+logging:
+  level:
+    root: WARN
+
+app:
+  kafka:
+    bootstrap-servers: localhost:9092
+    schema-registry-url: http://localhost:8081
+    topic: ping-messages
+  consumer:
+    group-id: kafka-avro-consumer
+    reader-schema-version: v2   # v1 | v2 | v3 - schema the consumer wants to read with
+    max-messages: 0             # 0 = run forever (Ctrl+C to stop)
