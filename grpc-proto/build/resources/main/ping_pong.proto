@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package pingpong.v1;
+
+option java_multiple_files = true;
+option java_package = "com.example.grpc.pingpong.v1";
+option java_outer_classname = "PingPongProto";
+
+// Simple Ping -> Pong service shared by the Java server, Java client and Python client.
+service PingPongService {
+  rpc Ping (PingRequest) returns (PongResponse);
+}
+
+message PingRequest {
+  string message   = 1;  // e.g. "Ping"
+  string client_id = 2;  // who is calling
+  int64  timestamp = 3;  // client time, epoch millis
+}
+
+message PongResponse {
+  string message       = 1;  // e.g. "Pong"
+  string server_id     = 2;  // which server answered
+  int64  timestamp     = 3;  // server time, epoch millis
+  int64  request_count = 4;  // number of requests served so far
+  string echo          = 5;  // original message sent by the client
+}

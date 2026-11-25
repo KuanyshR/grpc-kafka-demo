@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: kafka-avro-producer
+  main:
+    web-application-type: none
+    banner-mode: off
+
+logging:
+  level:
+    root: WARN
+
+app:
+  kafka:
+    bootstrap-servers: localhost:9092
+    schema-registry-url: http://localhost:8081
+    topic: ping-messages
+  producer:
+    schema-version: v1      # v1 | v2 | v3 (v3 is incompatible and will be rejected)
+    count: 3                # number of messages to send
+    message: Ping

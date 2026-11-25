@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.grpc.server.PingPongServiceImplTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-11-25T20:01:59.077Z" hostname="EPKZASTW0792" time="0.177">
+  <properties/>
+  <testcase name="rejectsEmptyMessage()" classname="com.example.grpc.server.PingPongServiceImplTest" time="0.101"/>
+  <testcase name="respondsPongToPing()" classname="com.example.grpc.server.PingPongServiceImplTest" time="0.009"/>
+  <system-out><![CDATA[01:01:59.171 [Test worker] INFO com.example.grpc.server.PingPongServiceImpl -- Received request: message='', clientId=''
+01:01:59.248 [Test worker] INFO com.example.grpc.server.PingPongServiceImpl -- Received request: message='Ping', clientId='junit'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

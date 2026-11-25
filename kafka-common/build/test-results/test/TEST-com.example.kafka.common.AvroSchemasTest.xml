@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.kafka.common.AvroSchemasTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-25T20:01:41.660Z" hostname="EPKZASTW0792" time="0.351">
+  <properties/>
+  <testcase name="v2ReaderCanReadV1Data()" classname="com.example.kafka.common.AvroSchemasTest" time="0.28"/>
+  <testcase name="v1ReaderCanReadV2Data()" classname="com.example.kafka.common.AvroSchemasTest" time="0.004"/>
+  <testcase name="extractsSchemaIdFromBytes1To4()" classname="com.example.kafka.common.AvroSchemasTest" time="0.003"/>
+  <testcase name="decodesV1PayloadWithV2ReaderUsingDefaults()" classname="com.example.kafka.common.AvroSchemasTest" time="0.036"/>
+  <testcase name="v3ReaderCannotReadV2Data()" classname="com.example.kafka.common.AvroSchemasTest" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+]]></system-err>
+</testsuite>
