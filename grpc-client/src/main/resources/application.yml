@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: grpc-ping-client
+  main:
+    web-application-type: none
+    banner-mode: off
+
+logging:
+  level:
+    root: WARN
+
+grpc:
+  client:
+    host: localhost
+    port: 8080
+    message: Ping
+    client-id: java-client
+    deadline-seconds: 5

@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "PingMessage",
+  "namespace": "com.example.kafka.avro",
+  "doc": "Version 2 - adds 'source' and 'priority' WITH defaults (backward compatible with v1)",
+  "fields": [
+    { "name": "id",        "type": "string" },
+    { "name": "message",   "type": "string" },
+    { "name": "timestamp", "type": "long" },
+    { "name": "source",    "type": "string", "default": "unknown", "doc": "Who produced the message" },
+    { "name": "priority",  "type": "int",    "default": 0,         "doc": "0 = low, 1 = normal, 2 = high" }
+  ]
+}

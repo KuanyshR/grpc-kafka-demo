@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: grpc-ping-server
+  main:
+    # No web server in this app -> keep the JVM alive while the gRPC server runs
+    keep-alive: true
+
+grpc:
+  server:
+    port: 8080
+    shutdown-grace-seconds: 5

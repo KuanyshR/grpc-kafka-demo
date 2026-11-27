@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "PingMessage",
+  "namespace": "com.example.kafka.avro",
+  "doc": "Version 3 - adds REQUIRED field 'region' WITHOUT default -> NOT backward compatible (registry rejects it)",
+  "fields": [
+    { "name": "id",        "type": "string" },
+    { "name": "message",   "type": "string" },
+    { "name": "timestamp", "type": "long" },
+    { "name": "source",    "type": "string", "default": "unknown" },
+    { "name": "priority",  "type": "int",    "default": 0 },
+    { "name": "region",    "type": "string" }
+  ]
+}
