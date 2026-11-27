@@ -1,0 +1,28 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    // Spring Boot BOM manages the kafka-clients / junit versions
+    api platform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
+
+    api 'org.apache.kafka:kafka-clients'
+    api("io.confluent:kafka-avro-serializer:${confluentVersion}") {
+        // use the kafka-clients version managed by Spring Boot
+        exclude group: 'org.apache.kafka', module: 'kafka-clients'
+    }
+
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+// Put the shared ../avro/*.avsc files on the classpath under /avro
+tasks.named('processResources') {
+    from("${rootDir}/avro") {
+        into 'avro'
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

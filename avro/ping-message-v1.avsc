@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "PingMessage",
+  "namespace": "com.example.kafka.avro",
+  "doc": "Version 1 - initial schema",
+  "fields": [
+    { "name": "id",        "type": "string", "doc": "Unique message id" },
+    { "name": "message",   "type": "string", "doc": "Payload text, e.g. Ping" },
+    { "name": "timestamp", "type": "long",   "doc": "Epoch millis when the message was created" }
+  ]
+}
